@@ -1,0 +1,16 @@
+language: python
+python:
+  - "2.6"
+  - "2.7"
+  - "3.3"
+  - "3.4"
+install:
+  - pip install .
+  - pip install -rrequirements.txt
+script: coverage run -m pytest
+notifications:
+  email:
+    - peter@goldsborough.me
+after_success:
+  - coveralls
+  #- curl -X POST https://readthedocs.org/build/lnk
