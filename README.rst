@@ -47,7 +47,7 @@ Estimated time: ~1 second. Estimated happiness: over 9000. You're welcome.
 Installing
 ==========
 
-Grab *li* off PyPI:
+You can grab *li* off PyPI:
 
 .. code-block:: bash
 
