@@ -24,7 +24,6 @@ requirements = [
     'coveralls==1.1',
     'docopt==0.6.2',
     'ecstasy==0.1.3',
-    'enum==0.4.6',
     'enum34==1.1.2',
     'py==1.4.31',
     'pytest==2.8.7',
