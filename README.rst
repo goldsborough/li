@@ -47,7 +47,7 @@ Estimated time: ~1 second. Estimated happiness: over 9000. You're welcome.
 Installing
 ==========
 
-*li* can be found on the PyPI:
+Grab *li* off PyPI:
 
 .. code-block:: bash
 
