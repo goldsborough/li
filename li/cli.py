@@ -8,9 +8,9 @@ import sys
 
 from datetime import date
 
-import license
+from li import license
 
-from errors import LicenseError
+from li.errors import LicenseError
 
 @click.command(help='A license fetcher.')
 @click.option('-a',
