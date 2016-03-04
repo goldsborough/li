@@ -59,7 +59,7 @@ setuptools.setup(
         'Intended Audience :: Developers',
         'Topic :: Software Development',
 
-        'Li :: OSI Approved :: MIT Li',
+        'License :: OSI Approved :: MIT License',
 
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
