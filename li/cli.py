@@ -8,11 +8,11 @@ import sys
 
 from datetime import date
 
-import li
+import license
 
 from errors import LicenseError
 
-@click.command(help='License file fetcher.')
+@click.command(help='A license fetcher.')
 @click.option('-a',
               '--author',
               nargs=1,
@@ -26,10 +26,10 @@ from errors import LicenseError
               '--kind',
               nargs=1,
               help='The kind of license to fetch.',
-              type=click.Choice(li.LICENSE_KINDS))
-def license(author, year, kind):
+              type=click.Choice(license.LICENSE_KINDS))
+def li(author, year, kind):
     try:
-        result = li.get(author, year, kind.lower() if kind else None)
+        result = license.get(author, year, kind.lower() if kind else None)
         click.echo(result, nl=False)
     except LicenseError:
         # Cross-version way of retrieving the exception instance
@@ -38,4 +38,4 @@ def license(author, year, kind):
 
 
 if __name__ == '__main__':
-    license()
+    li()

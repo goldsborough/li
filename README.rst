@@ -1,6 +1,6 @@
-********
-license
-********
+**
+li
+**
 
 .. image:: https://badge.fury.io/py/license.svg
     :target: http://badge.fury.io/py/license
@@ -18,7 +18,7 @@ license
 
 \
 
-*license* is a tool to quickly fetch a license.
+*li* is a tool to quickly fetch a license.
 
 When finishing up a project, you had two choices to fetch your license:
 
@@ -36,7 +36,7 @@ I propose the following solution:
 
 .. code-block:: bash
 
-    $ license -k mit -a Peter Goldsborough
+    $ li -k mit -a Peter Goldsborough
 
 Estimated time: ~2 seconds.
 
@@ -46,21 +46,21 @@ default value being the current year. The best thing is: your input is cached un
 
 .. code-block:: bash
 
-    $ license
+    $ li
 
 Estimated time: ~1 second. Estimated happiness: over 9000. You're welcome.
 
 Installing
 ==========
 
-*license* can be found on the PyPI:
+*li* can be found on the PyPI:
 
 .. code-block:: bash
 
-    $ pip install license
+    $ pip install li
 
 `License <goldsborough.mit-license.org>`_
-=====================================
+=========================================
 
 This project is licensed under the MIT-License.
 

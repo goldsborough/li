@@ -9,7 +9,7 @@ import sys
 
 import paths
 
-from license.errors import LicenseError
+from li.errors import LicenseError
 
 def test_error_message_contains_wanted():
     try:

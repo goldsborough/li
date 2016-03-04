@@ -8,10 +8,10 @@ import pytest
 import re
 import sys
 
-import paths
+from tests import paths
 
-from license import cache
-from license import errors
+from li import cache
+from li import errors
 
 @pytest.fixture
 def contents(request):

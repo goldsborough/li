@@ -6,10 +6,9 @@ setup.py script for setuptools.
 """
 
 import re
+import setuptools
 
-from setuptools import setup, find_packages
-
-with open('license/__init__.py') as init:
+with open('li/__init__.py') as init:
     version = re.search(
                 r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]',
         init.read(),
@@ -39,8 +38,8 @@ test_requirements = [
     "coverage==4.0.3"
 ]
 
-setup(
-    name='license',
+setuptools.setup(
+    name='li',
 
     version=version,
 
@@ -50,7 +49,7 @@ setup(
     author='Peter Goldsborough',
     author_email='peter@goldsborough.me',
 
-    url="https://github.com/goldsborough/license",
+    url="https://github.com/goldsborough/li",
 
     license='MIT',
 
@@ -60,7 +59,7 @@ setup(
         'Intended Audience :: Developers',
         'Topic :: Software Development',
 
-        'License :: OSI Approved :: MIT License',
+        'Li :: OSI Approved :: MIT Li',
 
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
@@ -73,11 +72,18 @@ setup(
         'Programming Language :: Python :: 3.5'
     ],
 
-    keywords='license projects',
+    keywords='li projects',
+
+    packages=setuptools.find_packages(exclude=['tests', 'files']),
 
     include_package_data=True,
 
-    packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
+    package_data=dict(li=[
+        '../README.rst',
+        '../LI.txt',
+        '../Makefile',
+        '../files/*'
+    ]),
 
     install_requires=requirements,
 
@@ -85,5 +91,5 @@ setup(
 
     tests_require=test_requirements,
 
-    entry_points=dict(console_scripts=['license = license.cli:main'])
+    entry_points=dict(console_scripts=['li = li.cli:li'])
 )
