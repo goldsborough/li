@@ -2,8 +2,8 @@
 li
 **
 
-.. image:: https://badge.fury.io/py/license.svg
-    :target: http://badge.fury.io/py/license
+.. image:: https://badge.fury.io/py/li.svg
+    :target: http://badge.fury.io/py/li
 
 .. image:: https://img.shields.io/github/license/mashape/apistatus.svg
 	:target: http://goldsborough.mit-license.org
@@ -11,8 +11,8 @@ li
 .. image:: http://img.shields.io/gratipay/goldsborough.svg
 	:target: https://gratipay.com/~goldsborough/
 
-.. image:: https://travis-ci.org/goldsborough/license.svg
-    :target: https://travis-ci.org/goldsborough/license
+.. image:: https://travis-ci.org/goldsborough/li.svg?branch=master
+    :target: https://travis-ci.org/goldsborough/li
 
 \
 
