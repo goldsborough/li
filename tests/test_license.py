@@ -10,7 +10,7 @@ import os
 from collections import namedtuple
 from datetime import date
 
-import paths
+from tests import paths
 
 from li import license
 from li import cache

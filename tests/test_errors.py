@@ -7,7 +7,7 @@ import pytest
 import re
 import sys
 
-import paths
+from tests import paths
 
 from li.errors import LicenseError
 
