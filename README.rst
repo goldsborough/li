@@ -30,7 +30,7 @@ I propose the following solution:
 
 .. code-block:: bash
 
-    $ li -k mit -a Peter Goldsborough
+    $ li -k mit -a Your Name > LICENSE
 
 Estimated time: ~2 seconds.
 
@@ -40,7 +40,7 @@ default value being the current year. The best thing is: your input is cached un
 
 .. code-block:: bash
 
-    $ li
+    $ li > LICENSE
 
 Estimated time: ~1 second. Estimated happiness: over 9000. You're welcome.
 
