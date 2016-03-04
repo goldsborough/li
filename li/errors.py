@@ -18,5 +18,6 @@ class LicenseError(Exception):
         is no longer able to function normally. Such a situation may be, for
         example, a cache miss or a connection timeout.
         """
+        self.message = LicenseError.ERROR + message
 
-        super(LicenseError, self).__init__(self.ERROR + message)
+        super(LicenseError, self).__init__(self.message)

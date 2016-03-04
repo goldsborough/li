@@ -2,9 +2,9 @@ import os
 import re
 import sys
 
-import cache
+from li import cache
 
-from errors import LicenseError
+from li.errors import LicenseError
 
 def get_license_kinds():
     kinds = set()

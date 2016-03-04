@@ -9,7 +9,7 @@ import os
 import re
 import sys
 
-from errors import LicenseError
+from li.errors import LicenseError
 
 CACHE_PATH = os.path.join(os.environ['HOME'], '.license')
 

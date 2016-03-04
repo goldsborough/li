@@ -6,7 +6,10 @@ setup.py script for setuptools.
 """
 
 import re
-import setuptools
+import sys
+
+from setuptools import setup, find_packages
+from setuptools.command.test import test as TestCommand
 
 with open('li/__init__.py') as init:
     version = re.search(
@@ -18,26 +21,19 @@ with open('li/__init__.py') as init:
 with open('README.rst') as readme:
     long_description = readme.read()
 
-requirements = [
-    'click==6.3',
-    'coverage==4.0.3',
-    'coveralls==1.1',
-    'docopt==0.6.2',
-    'ecstasy==0.1.3',
-    'enum34==1.1.2',
-    'py==1.4.31',
-    'pytest==2.8.7',
-    'requests==2.9.1',
-    'wheel==0.24.0'
-]
+class PyTest(TestCommand):
 
-test_requirements = [
-    "pytest==2.8.7",
-    "coveralls==1.1",
-    "coverage==4.0.3"
-]
+    def finalize_options(self):
+        TestCommand.finalize_options(self)
+        self.test_args = ['tests']
+        self.test_suite = True
 
-setuptools.setup(
+    def run_tests(self):
+        import pytest
+        errcode = pytest.main(self.test_args)
+        sys.exit(errcode)
+
+setup(
     name='li',
 
     version=version,
@@ -45,12 +41,11 @@ setuptools.setup(
     description='A tool to quickly fetch a license.',
     long_description=long_description,
 
+    url="https://github.com/goldsborough/li",
+    license='MIT',
+
     author='Peter Goldsborough',
     author_email='peter@goldsborough.me',
-
-    url="https://github.com/goldsborough/li",
-
-    license='MIT',
 
     classifiers=[
         'Development Status :: 4 - Beta',
@@ -70,13 +65,13 @@ setuptools.setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5'
     ],
-
     keywords='li projects',
 
-    packages=setuptools.find_packages(exclude=['tests', 'files']),
+    packages=find_packages(exclude=['tests', 'files']),
+
+    cmdclass=dict(test=PyTest),
 
     include_package_data=True,
-
     package_data=dict(li=[
         '../README.rst',
         '../LI.txt',
@@ -84,11 +79,16 @@ setuptools.setup(
         '../files/*'
     ]),
 
-    install_requires=requirements,
-
     test_suite="tests",
+    tests_require=[
+        "pytest==2.8.7"
+    ],
 
-    tests_require=test_requirements,
-
+    install_requires=[
+        'click==6.3',
+        'docopt==0.6.2',
+        'ecstasy==0.1.3',
+        'enum34==1.1.2'
+    ],
     entry_points=dict(console_scripts=['li = li.cli:li'])
 )
