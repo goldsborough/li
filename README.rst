@@ -22,15 +22,9 @@ li
 
 When finishing up a project, you had two choices to fetch your license:
 
-1. Go to some previous projects of yours and get the license you used
-	 there. Then check if the year of the license is still valid, else change
-	 it. Estimated time: ~30 seconds.
+1. Go to some previous projects of yours and get the license you used there. Then check if the year of the license is still valid, else change it. Estimated time: ~30 seconds.
 
-2. Go online and use a search engine to find the license of your choice, in
-	 plain-text. Naturally, you click on the wrong link about 13 times before you
-	 find a simple plain-text version of the license, for you to copy. Then
-	 replace the <year> and <author> fields with your data. Estimated
-	 time: ~1-2 minutes.
+2. Go online and use a search engine to find the license of your choice, in plain-text. Naturally, you click on the wrong link about 13 times before you find a simple plain-text version of the license, for you to copy. Then replace the <year> and <author> fields with your data. Estimated time: ~1-2 minutes.
 
 I propose the following solution:
 
