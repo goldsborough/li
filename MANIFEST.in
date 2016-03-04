@@ -5,5 +5,3 @@ recursive-include tests *
 recursive-include * Makefile
 recursive-exclude * __pycache__
 recursive-exclude * *.py[co]
-
-recursive-include docs *.rst conf.py

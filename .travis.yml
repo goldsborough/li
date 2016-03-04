@@ -4,13 +4,11 @@ python:
   - "2.7"
   - "3.3"
   - "3.4"
+  - "3.5"
 install:
   - pip install .
   - pip install -rrequirements.txt
-script: coverage run -m pytest
+script: python -m pytest tests
 notifications:
   email:
     - peter@goldsborough.me
-after_success:
-  - coveralls
-  #- curl -X POST https://readthedocs.org/build/lnk

@@ -19,6 +19,8 @@ LICENSE_KINDS = get_license_kinds()
 
 
 def get(author, year, kind):
+    assert year is not None, "Year should have been defaulted by click"
+
     if not author or not kind:
         author, kind = cache.read(author, kind)
 
