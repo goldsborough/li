@@ -30,9 +30,9 @@ I propose the following solution:
 
 .. code-block:: bash
 
-    $ li -k mit -a Your Name > LICENSE
+    $ li -k mit -a "Your Name" > LICENSE
 
-Estimated time: ~2 seconds.
+Estimated time: ~5 seconds.
 
 You can also pass a year with ``-y``, but I reckon you'll be happy with the
 default value being the current year. The best thing is: your input is cached under
